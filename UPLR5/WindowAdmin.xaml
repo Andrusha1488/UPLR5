@@ -1,0 +1,65 @@
+﻿<Window x:Class="UPLR5.WindowAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UPLR5"
+        mc:Ignorable="d"
+        Title="WindowAdmin" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right">
+        </StackPanel>
+        <Button Content="Добавить" Click ="Button1_Click" Grid.Row="2"/>
+        <Button Content="Изменить" Click ="Button2_Click" Grid.Row="3"/>
+        <Button Content="Удалить" Click ="Button3_Click" Grid.Row="4"/>
+        
+            <DataGrid x:Name="ProductsDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="OrdersDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="Product_BrandDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="Product_CategoriesDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="Store_AddressDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="StorageDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="PaymentDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="EmployeesDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="ProvidersDataGrid" Visibility="Collapsed"/>
+        <DataGrid x:Name="Ordered_ProductsDataGrid" Visibility="Collapsed"/>
+
+        <ComboBox x:Name="DataGridsComboBox" SelectionChanged="DataGridsComboBox_SelectionChanged" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="0">
+            <ComboBoxItem Content="Products"/>
+            <ComboBoxItem Content="Orders"/>
+            <ComboBoxItem Content="Product_Brands"/>
+            <ComboBoxItem Content="Product_Categories"/>
+            <ComboBoxItem Content="Store_Address"/>
+            <ComboBoxItem Content="Storage"/>
+            <ComboBoxItem Content="Payment"/>
+            <ComboBoxItem Content="Employees"/>
+            <ComboBoxItem Content="Providers"/>
+            <ComboBoxItem Content="Ordered_Products"/>
+        </ComboBox>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1">
+            <TextBox x:Name="Tbx1" Text="Введите значение"/>
+            <TextBox x:Name="Tbx2" Text="Введите значение"/>
+            <TextBox x:Name="TbxIdP" Text="Введите значение" Visibility="Collapsed"/>
+            <PasswordBox x:Name="PasswordAdmin" Width="40" Visibility="Collapsed"/>
+            <TextBox x:Name="Tbx3" Text="Введите значение"/>
+            <TextBox x:Name="Tbx4" Text="Введите значение"/>
+            <TextBox x:Name="Tbx5" Text="Введите значение"/>
+                <Button Content="Вернуться на авторизацию" Click ="Button4_Click" Grid.Row="1"/>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
